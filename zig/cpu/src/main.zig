@@ -5,8 +5,8 @@ pub fn main() !void {
     var cpu = ria.Cpu{
         .position_in_memory = 0,
         .registers = [_]u8{0} ** 16,
-        .memory = [_]u8{0} ** 4096,
-        .stack = [_]u16{0} ** 16,
+        .memory = [_]u8{0} ** 4096, // another way of declaring zeroed mem, less clear (arguably)
+        .stack = std.mem.zeroes([16]u16), // clean/clear way of declaring zeroed mem
         .stack_pointer = 0,
     };
 

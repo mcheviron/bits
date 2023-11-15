@@ -1,1 +1,3 @@
 cpu/zig-cache/
+/mem/target
+/cpu/target
